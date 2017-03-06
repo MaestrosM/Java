@@ -1,0 +1,45 @@
+package hr.fer.zemris.java.hw01;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class UniqueNumbersTest {
+
+	@Test
+	public void dodavanjeKorijena() {
+		UniqueNumbers.TreeNode glava = null;
+		glava = UniqueNumbers.addNode(glava, 5);
+		assertEquals(glava.value, 5);
+		assertEquals(glava.left, null);
+		assertEquals(glava.right, null);
+	}
+	
+	@Test
+	public void dodavanjeIsteVrijednosti() {
+		UniqueNumbers.TreeNode glava = null;
+		glava = UniqueNumbers.addNode(glava, 42);
+		glava = UniqueNumbers.addNode(glava, 42);
+		assertEquals(glava.value, 42);
+		assertEquals(glava.left, null);
+		assertEquals(glava.right, null);
+	}
+	
+	@Test
+	public void dodavanjeViseVrijednosti() {
+		UniqueNumbers.TreeNode glava = null;
+		glava = UniqueNumbers.addNode(glava, 42);
+		glava = UniqueNumbers.addNode(glava, 76);
+		glava = UniqueNumbers.addNode(glava, 21);
+		glava = UniqueNumbers.addNode(glava, 76);
+		glava = UniqueNumbers.addNode(glava, 35);
+		assertEquals(glava.value, 42);
+		assertEquals(glava.left.value, 21);
+		assertEquals(glava.left.right.value, 35);
+		assertEquals(glava.right.value, 76);
+	}
+	
+	
+	
+}

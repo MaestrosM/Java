@@ -1,0 +1,19 @@
+package hr.fer.zemris.java.hw01;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+
+public class UniqueNumbersTest {
+
+	@Test
+	public void dodavanjeKorijena() {
+		UniqueNumbers.TreeNode glava = null;
+		glava = UniqueNumbers.addNode(glava, 5);
+		assertEquals(glava.value, 5);
+		assertEquals(glava.left, null);
+		assertEquals(glava.right, null);
+	}
+
+}

@@ -1,0 +1,101 @@
+package hr.fer.zemris.java.hw01;
+
+
+/**
+ * Program u kojem kosrisnik sa tipkovnice unosi broj po broj i dodaje ih u 
+ * binarno stablo ako tamo vec ne postoje (sto se dogodilo ispisuje na zaslon).
+ * Korisnik unos prekida utipkavanjem "kraj". Jednom kad je unos gotov, program ispisuje brojeve
+ * naprije sortirano od manjeg prema vecem, a potom u sljedecem retku od veceg prema manjem.
+ *
+ * @author Tina Maric
+ * @version 1.0
+ */
+
+
+public class UniqueNumbers {
+	
+	
+	
+	static class TreeNode {
+		TreeNode left, right;
+		int value;
+	}
+	
+	/**
+   * Metoda od koje kreće izvođenje programa.
+   *
+   * @param args argumenti zadani preko naredbenog retka. Ne koriste se.
+   */
+
+	public static void main(String[] args) {
+		
+
+	}
+	
+	/**
+   * Metoda kojom se dodaje novi cvor u stablo.
+   *
+   * @param glava korijen stabla.
+   * @param value vrijednost koju ce sadrzavati novi cvor kojeg dodamo.
+   * @return glava vracamo korijen stabla
+   */
+
+	public static TreeNode addNode(TreeNode glava, int value) {
+		if(glava == null) {
+			glava = new TreeNode();
+			glava.left = null;
+			glava.right = null;
+			glava.value = value;
+			return glava;
+		} 
+		TreeNode temp = glava;
+		while(true) {
+			if(value == temp.value) {
+				return glava;
+			} 
+			else if(value < temp.value) {
+				if(temp.left != null) {
+					temp = temp.left;
+					continue;
+				} else {
+					temp.left = new TreeNode();
+					temp.left.left = null;
+					temp.left.right = null;
+					temp.left.value = value;
+					return glava;
+				}
+			} else {
+				if(temp.right != null) {
+					temp = temp.right;
+					continue;
+				} else {
+					temp.right = new TreeNode();
+					temp.right.left = null;
+					temp.right.right = null;
+					temp.right.value = value;
+					return glava;
+				}
+			}
+		}
+	}
+	
+	/**
+   * Metoda koja vraca velicinu stabla.
+   *
+   * @param glava korijen stabla.
+   * @param value vrijednost koju ce sadrzavati novi cvor kojeg dodamo.
+   * @return glava vracamo korijen stabla
+   */
+
+	public static int treeSize(treeNode glava) {
+		if(glava == null) {
+			return 0;
+		}
+		if(glava.left == null && glava.right == null) {
+			return 1;
+		}
+		return(treeSize(glava.left) + treeSize(glava.right));
+	}
+
+
+}

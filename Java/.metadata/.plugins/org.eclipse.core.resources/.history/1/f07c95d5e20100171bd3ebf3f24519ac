@@ -1,0 +1,33 @@
+package hr.fer.zemris.java.hw01;
+
+
+/**
+ * Program koji ispisuje faktorijel cijelog broja koji mora biti u rasponu od 1 do 20 i
+ * koji se unosi preko tipkovnice. Rad programa zavrsava se nakon unosa "kraj".
+ *
+ * @author Tina Maric
+ * @version 1.0
+ */
+
+
+public class UniqueNumbers {
+	
+	
+	
+	static class TreeNode {
+		TreeNode left, right;
+		int value;
+	}
+	
+	/**
+   * Metoda od koje kreće izvođenje programa.
+   *
+   * @param args argumenti zadani preko naredbenog retka. Ne koriste se.
+   */
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

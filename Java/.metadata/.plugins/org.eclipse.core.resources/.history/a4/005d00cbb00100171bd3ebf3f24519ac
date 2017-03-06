@@ -1,0 +1,29 @@
+package hr.fer.zemris.java.hw01;
+
+import java.util.Scanner;
+
+
+/**
+ * Program koji ispisuje faktorijelu cijelog broja koji mora biti u rasponu od 1 do 20 i
+ * koji se unosi preko tipkovnice. Rad programa zavrsava se nakon unosa "kraj".
+ *
+ * @author Tina Maric
+ */
+
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.printf("Unesite broj > ");
+			if(sc.hasNextInt()) {
+				int current = sc.nextInt();
+				if()
+			}
+		}
+		
+	}
+
+}

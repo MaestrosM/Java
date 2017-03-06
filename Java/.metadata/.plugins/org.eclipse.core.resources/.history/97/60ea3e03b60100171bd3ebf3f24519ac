@@ -1,0 +1,112 @@
+package hr.fer.zemris.java.hw01;
+
+import java.util.Scanner;
+
+
+/**
+ * Program koji ispisuje faktorijelu cijelog broja koji mora biti u rasponu od 1 do 20 i
+ * koji se unosi preko tipkovnice. Rad programa zavrsava se nakon unosa "kraj".
+ *
+ * @author Tina Maric
+ * @version 1.0
+ */
+
+
+//public class Factorial {
+//
+//	
+//	/**
+//   * Metoda od koje kreće izvođenje programa.
+//   *
+//   * @param args argumenti zadani preko naredbenog retka
+//   */
+//	
+//	public static void main(String[] args) {
+//		Scanner sc = new Scanner(System.in);
+//		
+//		while(true) {
+//			System.out.printf("Unesite broj > ");
+//			if(sc.hasNextInt()) {
+//				int current = sc.nextInt();
+//				if(current < 1 || current > 20) {
+//					System.out.printf("'%d' nije broj u dozvoljenom rasponu.%n", current);
+//				} else {
+//					long currentLong = Long.parseLong(Integer.toString(current));
+//					long factorial = calculateFactorial(currentLong);
+//					System.out.printf("%d! = %d%n", currentLong, factorial);
+//				}
+//			} else if (sc.hasNextLong()) {
+//				String elem = sc.next();
+//				System.out.printf("'%s' nije broj u dozvoljenom rasponu.%n", elem);
+//			}
+//			else  {
+//				String elem = sc.next();
+//				System.out.printf("'%s' nije cijeli broj.%n", elem);
+//			} 
+//		}
+//	}
+//	
+/**
+ * Metoda koja racuna faktorijel broja.
+ *
+ *  @param  number broj ciji faktorijel racunamo
+ *  @return iyracunata faktorijel vrijednost
+ */
+
+//	public static long calculateFactorial(long number) {
+//		if(number == 1) {
+//			return 1;
+//		}
+//		return number * calculateFactorial(number - 1);
+//	}
+//	
+//
+//}
+
+public class Factorial {
+
+	
+	/**
+   * Metoda od koje kreće izvođenje programa.
+   *
+   * @param args argumenti zadani preko naredbenog retka
+   */
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		while(true) {
+			System.out.printf("Unesite broj > ");
+			if(sc.hasNextLong()) {
+				long current = sc.nextLong();
+				if(current < 1 || current > 20) {
+					System.out.printf("'%d' nije broj u dozvoljenom rasponu.%n", current);
+				} else {
+					long factorial = calculateFactorial(current);
+					System.out.printf("%d! = %d%n", current, factorial);
+				}
+			} else  {
+				String elem = sc.next();
+				System.out.printf("'%s' nije cijeli broj.%n", elem);
+			} 
+		}
+	}
+	
+	
+	/**
+   * Metoda koja racuna faktorijel broja.
+   *
+   *  @param  number broj ciji faktorijel racunamo
+   *  @return iyracunata faktorijel vrijednost
+   */
+	
+	public static long calculateFactorial(long number) {
+		if(number == 1) {
+			return 1;
+		}
+		return number * calculateFactorial(number - 1);
+	}
+	
+
+}
+

@@ -1,0 +1,18 @@
+package hr.fer.zemris.java.hw01;
+
+/**
+ * Program koji ispisuje faktorijelu cijelog broja koji mora biti u rasponu od 1 do 20 i
+ * koji se unosi preko tipkovnice. Rad programa yavrsava se nakon unosa "kraj"
+ *
+ * @author Tina Maric
+ */
+
+
+public class Factorial {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

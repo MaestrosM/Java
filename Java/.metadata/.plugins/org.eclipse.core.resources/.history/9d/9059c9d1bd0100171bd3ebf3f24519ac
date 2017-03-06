@@ -1,0 +1,49 @@
+package hr.fer.zemris.java.hw01;
+
+import java.util.Scanner;
+
+
+/**
+ * Program koji ispisuje povrsinu i opseg pravokutnika. 
+ * Sirina i visina se unose preko naredbenog retka. 
+ * Ukoliko se argumenti ne unesu  korisnik ih unosi preko tipkovnice.
+ * Ukoliko se unese broj argumenata razlicit od 0 i 2 ispisuje se poruka 
+ * i program prekida sa radom. 
+ * 
+ *
+ * @author Tina Maric
+ * @version 1.0
+ */
+
+
+public class Rectangle {
+
+	  /**
+	   * Metoda od koje kreće izvođenje programa.
+	   *
+	   * @param args argumenti zadani preko naredbenog retka. 
+	   */
+	
+	public static void main(String[] args) {
+		if(args.length == 2) {
+			try {
+				double width = Double.parseDouble(args[0]);
+				double height = Double.parseDouble(args[1]);
+			} catch(NumberFormatException ex) {
+				System.out.printf("Krivi unos argumenata!");
+				continue;
+			}
+			printSurfaceAndExtent(width, height, null);
+		} else if(args.length == 0) {
+			
+		} else {
+			
+		}
+
+	}
+	
+	public static void printSurfaceAndExtent(double width, double height, Scanner sc) {
+		System.out.printf("Bilo sta");
+	}
+
+}
