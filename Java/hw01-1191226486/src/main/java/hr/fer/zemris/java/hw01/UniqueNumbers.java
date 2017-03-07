@@ -16,7 +16,7 @@ import java.util.Scanner;
 public class UniqueNumbers {
 
 	/**
-	 * Pomocna struktura koja predstavlja cvor stabla. Sadrzi jednu vrijednost
+	 * Pomocni rayred koji predstavlja cvor stabla. Sadrzi jednu vrijednost
 	 * tipa int.
 	 *
 	 */
@@ -69,9 +69,9 @@ public class UniqueNumbers {
 		}
 
 		sc.close();
-		sortFromSmallest(glava);
+		printFromSmallest(glava);
 		System.out.println();
-		sortFromGreatest(glava);
+		printFromGreatest(glava);
 	}
 
 	/**
@@ -168,7 +168,7 @@ public class UniqueNumbers {
 	 *            korijen stabla.
 	 */
 
-	public static void sortFromSmallest(TreeNode glava) {
+	public static void printFromSmallest(TreeNode glava) {
 		if (glava == null) {
 			return;
 		}
@@ -185,7 +185,7 @@ public class UniqueNumbers {
 	 * 
 	 */
 
-	public static void sortFromGreatest(TreeNode glava) {
+	public static void printFromGreatest(TreeNode glava) {
 		if (glava == null) {
 			return;
 		}

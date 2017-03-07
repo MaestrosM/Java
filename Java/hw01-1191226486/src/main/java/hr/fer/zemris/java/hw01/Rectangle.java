@@ -25,67 +25,7 @@ public class Rectangle {
 	   * @param args argumenti zadani preko naredbenog retka. 
 	   * Prvi argument predstavlja sirinu, drugi argument predstavlja visinu pravokutnika
 	   */
-//	
-//	public static void main(String[] args) {
-//		if(args.length == 2) {
-//			double width = 0, height = 0;
-//			try {
-//				width = Double.parseDouble(args[0]);
-//				height = Double.parseDouble(args[1]);
-//			} catch(NumberFormatException ex) {
-//				System.out.println("Oba ragumenta moraju biti brojevi!");
-//				System.exit(1);
-//			}
-//			if(width < 0 || height < 0) {
-//				System.out.println("Visina i sirina ne mogu biti negativni brojevi!");
-//				System.exit(1);
-//			} else {
-//				printAreaAndPerimeter(width, height);
-//			}
-//		} else if(args.length == 0) {
-//			Scanner sc = new Scanner(System.in);
-//			double width, height;
-//			while(true) {
-//				System.out.printf("Unesite sirinu > ");
-//				if(sc.hasNextDouble()) {
-//					width = sc.nextDouble();
-//					if(width < 0) {
-//						System.out.println("Unijeli ste negativnu vrijednost");
-//						continue;
-//					} else {
-//						break;
-//					}
-//				} else {
-//					String elem = sc.next();
-//					System.out.printf("'%s' se ne moze protumaciti kao broj.%n", elem);
-//				}
-//			}	
-//			while(true) {
-//				System.out.printf("Unesite visinu > ");
-//				if(sc.hasNextDouble()) {
-//					height = sc.nextDouble();
-//					if(height < 0) {
-//						System.out.println("Unijeli ste negativnu vrijednost");
-//						continue;
-//					} else {
-//						break;
-//					}
-//				} else {
-//					String elem = sc.next();
-//					System.out.printf("'%s' se ne moze protumaciti kao broj.%n", elem);
-//				}
-//			}
-//			printAreaAndPerimeter(width, height);
-//			sc.close();
-//		} else {
-//			System.out.println("Krivi broj unesenih argumenata!");
-//			System.exit(1);
-//		}
-//
-//
-	
-	
-	
+
 	public static void main(String[] args) {
 		DecimalFormat df = new DecimalFormat("0.0");
 		if(args.length == 2) {
@@ -180,25 +120,6 @@ public class Rectangle {
 	   * @return value ispravno unesen decimalni broj
 	   * 
 	   */
-	
-//	public static double getDecimalValue(String type, Scanner sc) {
-//		while(true) {
-//			double value;
-//			System.out.printf("Unesite " + type + " > ");
-//			if(sc.hasNextDouble()) {
-//				value = sc.nextDouble();
-//				if(value < 0) {
-//					System.out.println("Unijeli ste negativnu vrijednost");
-//					continue;
-//				} else {
-//					return value;
-//				}
-//			} else {
-//				String elem = sc.next();
-//				System.out.printf("'%s' se ne moze protumaciti kao broj.%n", elem);
-//			}
-//		}
-//	}
 	
 	public static double getDecimalValue(String type, Scanner sc) {
 		while(true) {

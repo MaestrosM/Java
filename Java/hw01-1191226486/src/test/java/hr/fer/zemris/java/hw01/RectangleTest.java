@@ -4,20 +4,15 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-/**
- * Razred koji sadrzi testove za provjeru metoda razreda {@link Rectangle}
- */
 
 
 public class RectangleTest {
 
-	/**
-	   * Test koji provjerava racunjanje povrsine.
-	   *
-	   */
-	
+
 	@Test
 	public void testArea() {
+		assertEquals(Rectangle.calculateArea(2, 8), 16, 1e-15);
+		assertEquals(Rectangle.calculateArea(2.1, 8), 16.8, 1e-15);
 		
 	}
 
