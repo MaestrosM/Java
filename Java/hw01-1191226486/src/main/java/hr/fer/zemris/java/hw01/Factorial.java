@@ -12,50 +12,6 @@ import java.util.Scanner;
  */
 
 
-//public class Factorial {
-//
-//	
-//	/**
-//   * Metoda od koje kreće izvođenje programa.
-//   *
-//   * @param args argumenti zadani preko naredbenog retka
-//   */
-//	
-//	public static void main(String[] args) {
-//		Scanner sc = new Scanner(System.in);
-//		
-//		while(true) {
-//			System.out.printf("Unesite broj > ");
-//			if(sc.hasNextInt()) {
-//				int current = sc.nextInt();
-//				if(current < 1 || current > 20) {
-//					System.out.printf("'%d' nije broj u dozvoljenom rasponu.%n", current);
-//				} else {
-//					long currentLong = Long.parseLong(Integer.toString(current));
-//					long factorial = calculateFactorial(currentLong);
-//					System.out.printf("%d! = %d%n", currentLong, factorial);
-//				}
-//			} else if (sc.hasNextLong()) {
-//				String elem = sc.next();
-//				System.out.printf("'%s' nije broj u dozvoljenom rasponu.%n", elem);
-//			}
-//			else  {
-//				String elem = sc.next();
-//				System.out.printf("'%s' nije cijeli broj.%n", elem);
-//			} 
-//		}
-//	}
-//	
-//	public static long calculateFactorial(long number) {
-//		if(number == 1) {
-//			return 1;
-//		}
-//		return number * calculateFactorial(number - 1);
-//	}
-//	
-//
-//}
-
 public class Factorial {
 
 	

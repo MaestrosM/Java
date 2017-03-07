@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="FactorialTest" project="hw01-1191226486" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="hr.fer.zemris.java.hw01.FactorialTest" time="0.0">
-    <testcase name="nedopusteniBrojevi" classname="hr.fer.zemris.java.hw01.FactorialTest" time="0.0"/>
-    <testcase name="brojeviUDozvoljenomRasponu" classname="hr.fer.zemris.java.hw01.FactorialTest" time="0.0"/>
-    <testcase name="rubniSlucajevi" classname="hr.fer.zemris.java.hw01.FactorialTest" time="0.0"/>
-  </testsuite>
-</testrun>
