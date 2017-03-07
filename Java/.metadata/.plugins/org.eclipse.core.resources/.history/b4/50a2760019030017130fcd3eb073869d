@@ -149,7 +149,7 @@ public class Rectangle {
 	   */
 	
 	public static double calculatePerimeter(double width, double height) {
-		double area = 2 * (width +  height);
+		double area = 2 * (width + height);
 		return area;
 	}
 	
