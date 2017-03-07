@@ -5,17 +5,9 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 
-
-/**
- * Razred koji sadrzi testove za provjeru metoda razreda {@link UniqueNumbers}
- */
-
 public class UniqueNumbersTest {
 
-	/**
-	   * Test koji provjerava metodu addNode za dodavanje prvog cvora u stablo
-	   *
-	   */
+	
 	
 	@Test
 	public void dodavanjeKorijena() {
@@ -25,12 +17,7 @@ public class UniqueNumbersTest {
 		assertEquals(glava.left, null);
 		assertEquals(glava.right, null);
 	}
-	
-	/**
-	   * Test koji provjerava metodu addNode za dodavanje cvora sa istom vrijdnosti
-	   *
-	   */
-	
+
 	@Test
 	public void dodavanjeIsteVrijednosti() {
 		UniqueNumbers.TreeNode glava = null;
@@ -40,11 +27,6 @@ public class UniqueNumbersTest {
 		assertEquals(glava.left, null);
 		assertEquals(glava.right, null);
 	}
-	
-	/**
-	   * Test koji provjerava metodu addNode za dodavanje vise cvorova.
-	   *
-	   */
 	
 	@Test
 	public void dodavanjeViseVrijednosti() {
@@ -59,34 +41,20 @@ public class UniqueNumbersTest {
 		assertEquals(glava.left.right.value, 35);
 		assertEquals(glava.right.value, 76);
 	}
-	
-	/**
-	   * Test koji provjerava metodu treeSize za pazno stablo.
-	   *
-	   */
-	
+		
 	@Test
 	public void velicinaPraznogStabla() {
 		UniqueNumbers.TreeNode glava = null;
 		assertEquals(UniqueNumbers.treeSize(glava), 0);
 	}
 	
-	/**
-	   * Test koji provjerava metodu treeSize za stablo sa jednim cvorom.
-	   *
-	   */
-	
+
 	@Test
 	public void velicinaPraznogStablaJedanCvor() {
 		UniqueNumbers.TreeNode glava = null;
 		glava = UniqueNumbers.addNode(glava, 42);
 		assertEquals(UniqueNumbers.treeSize(glava), 1);
 	}
-	
-	/**
-	   * Test koji provjerava metodu treeSize za stablo sa vise cvorova.
-	   *
-	   */
 	
 	@Test
 	public void velicinaStablaViseCvorova() {
@@ -99,22 +67,12 @@ public class UniqueNumbersTest {
 		assertEquals(UniqueNumbers.treeSize(glava), 4);
 	}
 	
-	/**
-	   * Test koji provjerava metodu containsValue za prazno stablo.
-	   *
-	   */
-
 	@Test
 	public void praznoStabloSadrzi() {
 		UniqueNumbers.TreeNode glava = null;
 		assertEquals(UniqueNumbers.containsValue(glava, 5), false);
 	}
-	
-	/**
-	   * Test koji provjerava metodu containsValue za stablo sa jednim cvorom.
-	   *
-	   */
-	
+
 	@Test
 	public void jedanCvorSadrzi() {
 		UniqueNumbers.TreeNode glava = null;
@@ -122,24 +80,12 @@ public class UniqueNumbersTest {
 		assertEquals(UniqueNumbers.containsValue(glava, 42), true);
 	}
 	
-	/**
-	   * Test koji provjerava metodu containsValue za stablo 
-	   * koje ne sadrzi trayenu vrijednost.
-	   *
-	   */
-	
 	@Test
 	public void jedanCvorNeSadrzi() {
 		UniqueNumbers.TreeNode glava = null;
 		glava = UniqueNumbers.addNode(glava, 42);
 		assertEquals(UniqueNumbers.containsValue(glava, 43), false);
 	}
-	
-	/**
-	   * Test koji provjerava metodu containsValue za stablo 
-	   * koje sadrzi vise cvorova.
-	   *
-	   */
 	
 	@Test
 	public void viseCvorovaSadrzi() {
@@ -151,12 +97,6 @@ public class UniqueNumbersTest {
 		glava = UniqueNumbers.addNode(glava, 35);
 		assertEquals(UniqueNumbers.containsValue(glava, 21), true);
 	}
-	
-	/**
-	   * Test koji provjerava metodu containsValue za stablo 
-	   * koje sadrzi vise cvorova vrijednost koja se ne nalazi u njemu.
-	   *
-	   */
 	
 	@Test
 	public void viseCvorovaNeSadrzi() {

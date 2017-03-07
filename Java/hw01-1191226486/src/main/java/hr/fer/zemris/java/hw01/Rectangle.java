@@ -82,7 +82,7 @@ public class Rectangle {
 //			System.exit(1);
 //		}
 //
-//	}
+//
 	
 	
 	
@@ -90,10 +90,14 @@ public class Rectangle {
 		DecimalFormat df = new DecimalFormat("0.0");
 		if(args.length == 2) {
 			double width = 0, height = 0;
-					
+			String args0 = args[0];
+			String args1 = args[1];
+			args0 = args0.replaceAll(",",".");		
+			args1 = args1.replaceAll(",",".");
+			
 			try {
-				width = Double.parseDouble(args[0]);
-				height = Double.parseDouble(args[1]);
+				width = Double.parseDouble(args0);
+				height = Double.parseDouble(args1);
 			} catch(NumberFormatException ex) {
 				System.out.println("Oba ragumenta moraju biti brojevi!");
 				System.exit(1);
@@ -149,8 +153,8 @@ public class Rectangle {
 	   */
 	
 	public static double calculatePerimeter(double width, double height) {
-		double area = 2 * (width +  height);
-		return area;
+		double perimeter = 2 * (width +  height);
+		return perimeter;
 	}
 	
 	
@@ -202,6 +206,7 @@ public class Rectangle {
 			System.out.printf("Unesite " + type + " > ");
 			if(sc.hasNext()) {
 				String elem = sc.next();
+				elem = elem.replaceAll(",",".");		
 				try {
 					value = Double.parseDouble(elem);
 				} catch(NumberFormatException ex) {
